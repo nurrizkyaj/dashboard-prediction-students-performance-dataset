@@ -138,7 +138,7 @@ streamlit run app.py
    The project utilized the **Random Forest** machine learning model, achieving the highest accuracy of **90.72%** in predicting student status, allowing early detection of students at risk of dropping out with high confidence.
 
 2. **Key Factors Influencing Dropout**
-   Based on the **Feature Importance** from the Random Forest model, the main factors affecting dropout are: **UKT payment status**, **scholarship status**, **qualification scores**, **age group**, **study program**, **semester grades (1.2)**, **failed subjects**, and **passed subjects**. These findings provide strategic insight for targeted interventions.
+   Based on the **Feature Importance** from the Random Forest model, the main factors affecting dropout are: **UKT payment status**, **scholarship status**, **qualification scores**, **age group**, **study program**, **semester grades (1-2)**, **failed subjects**, and **passed subjects**. These findings provide strategic insight for targeted interventions.
 
 3. **Prediction System and Monitoring Dashboard**
    The machine learning model shows good performance in predicting student status. The interactive dashboard provides real-time visualizations to support effective monitoring.
