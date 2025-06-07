@@ -1,150 +1,157 @@
-## Proyek Akhir: Menyelesaikan Permasalahan Jaya Jaya Maju Institute
+## Solving the Problems of Jaya Jaya Maju Institute
 
 ### Business Understanding
-**Jaya Jaya Institut**, sebagai institusi pendidikan tinggi yang telah beroperasi sejak tahun 2000, saat ini menghadapi tantangan yang cukup serius terkait tingginya angka mahasiswa yang mengalami dropout atau putus studi sebelum menyelesaikan program akademik mereka. Permasalahan ini tidak hanya mengancam kredibilitas dan reputasi institusi, tetapi juga berdampak signifikan terhadap masa depan mahasiswa itu sendiri. Mengingat pentingnya keberhasilan akademik bagi perkembangan individu dan keberlanjutan institusi secara keseluruhan, pihak manajemen membutuhkan pendekatan proaktif dan berbasis data untuk mengantisipasi risiko dropout sedini mungkin, sehingga dapat memberikan dukungan dan bimbingan yang tepat untuk mengurangi prevalensi dropout mahasiswa.
 
+**Jaya Jaya Institute**, a higher education institution operating since 2000, is currently facing serious challenges due to the high number of students dropping out before completing their academic programs. This issue not only threatens the credibility and reputation of the institution but also significantly impacts the students' futures. Considering the importance of academic success for both individual development and institutional sustainability, the management requires a proactive, data-driven approach to anticipate dropout risks as early as possible. This will enable the provision of proper support and guidance to reduce student dropout prevalence.
 
-### Permasalahan Bisnis
-* Tingginya prevalensi dropout mahasiswa.
-* Tidak ada platform monitoring yang komprehensif untuk mendeteksi potensi mahasiswa yang berisiko dropout secara dini serta mengidentifikasi tren prevalensi dropout.
-* Tidak ada sistem prediktif untuk melakukan prediksi status mahasiswa berdasarkan data akademik serta informasi pribadi mahasiswa seperti, status pernikahan, umur, finansial dan sebagainya.
+### Business Problems
 
+* High student dropout rate.
+* Lack of a comprehensive monitoring platform to detect potential at-risk students early and identify dropout trends.
+* Absence of a predictive system to forecast student status using academic data and personal information such as marital status, age, financial background, etc.
 
-### Cakupan Proyek
-* Melakukan analisis serta mengidentifikasi faktor utama yang menjadi penyebab dropout.
-* Membangun sebuah sistem prediktif dengan memanfaatkan Machine Learning untuk memprediksi risiko dropout berdasarkan beberapa faktor yang memiliki korelasi paling tinggi dengan target.
-* Menyusun dahsboard interaktif untuk monitoring tren berdasarkan data historis mahasiswa.
+### Project Scope
 
-**Persiapan Sumber data**: 
-* [Dicoding GitHub Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/students_performance) 
+* Analyze and identify the main factors causing student dropout.
+* Build a predictive system using Machine Learning to predict dropout risk based on the most highly correlated factors.
+* Develop an interactive dashboard to monitor trends using historical student data.
+
+**Data Sources**:
+
+* [Dicoding GitHub Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/students_performance)
 * [UCI Machine Learning - Predict Students Dropout and Academic Success](https://doi.org/10.24432/C5MC89)
 
-Setup environment: 
+Environment Setup:
+
 ```
-# Membuat virtual environment
+# Create virtual environment
 python -m venv venv
 
-# Mengaktifkan virtual environment
+# Activate virtual environment
 venv\Scripts\activate
 
-# Menginstall depedensi yang dibutuhkan
+# Install required dependencies
 pip install -r requirements.txt
 
-# Menjalankan model prediksi
-streamlit run app.py         
-```
----
-### Business Dashboard
-Dashboard analisis dropout mahasiswa yang dikembangkan dengan menggunakan **Looker Studio** merupakan sebuah sistem visualisasi data terintegrasi yang dirancang khusus untuk monitoring dan menganalisis kondisi akademik mahasiswa di Jaya Jaya Institute. Dashboard ini berfokus pada identifikasi faktor-faktor yang mempengaruhi tingkat dropout mahasiswa dan menyediakan insight mendalam untuk mendukung pengambilan keputusan strategis dalam pengelolaan akademik.
-
-Tujuan utama dashboard ini adalah memberikan visibilitas menyeluruh terhadap profil mahasiswa, pola dropout, dan faktor-faktor yang berkontribusi terhadap keberhasilan atau kegagalan akademik mahasiswa.
-
-1. **Overview Institusi (Key Metrics)**
-    Dashboard menampilkan 4 metrik utama yang memberikan gambaran menyeluruh kondisi institusi:
-    * **Jumlah Mahasiswa**: 3,630 mahasiswa aktif
-    *  **Rata-rata Umur**: 23.46 tahun
-    * **Rata-rata Dropout**: 0.39 (39% tingkat dropout)
-    * **Rata-rata Graduate**: 0.61 (61% tingkat kelulusan)
-
-2. **Analisis Status Mahasiswa**
-   **Distribusi Mahasiswa Dropout dan Graduate** menunjukkan perbandingan antara mahasiswa yang lulus (2,209 mahasiswa) dengan yang dropout (1,421 mahasiswa), memberikan baseline untuk evaluasi keberhasilan institusi.
-
-3. **Analisis Faktor Finansial**
-    **Distribusi Mahasiswa Dropout Berdasarkan Beasiswa** menganalisis korelasi antara status penerimaan beasiswa dengan tingkat dropout:
-
-    * Mahasiswa tanpa beasiswa: 1,374 graduate vs 1,287 dropout
-    * Mahasiswa dengan beasiswa: 835 graduate vs 134 dropout
-
-4. **Analisis Akademik**
-    **Persentase 5 Prodi Dengan Tingkat Dropout Tertinggi** mengidentifikasi program studi yang memerlukan perhatian khusus:    
-
-    * Biofuel Production Technologies: 88.89%
-    * Informatics Engineering: 86.79%
-    * Equinaculture: 65%
-    * Management (Evening Attendance): 63.55%
-    * Basic Education: 59.86%
-
-5. **Analisis Demografis**
-   * **Distribusi Dropout Berdasarkan Rata-rata Nilai**: Membandingkan mahasiswa dengan nilai tinggi (748 dropout) vs rendah (673 dropout)
-   * **Distribusi Tingkat Dropout Berdasarkan Kategori Umur**: Menunjukkan bahwa mahasiswa dengan kategori umur "Yes" memiliki 3,144 status aktif dibanding 466 dengan kategori "No"
-
-Link Dashbord: [Student Status Analysis Dashboard](https://lookerstudio.google.com/reporting/dbae61fc-6a2e-48fb-a4bd-b5f44fb0a5c3)
-![image](nurrizkyarumjatmiko-dashboard.jpg)
-
-
-
-### Fungsi-Fungsi Utama Dashboard:
-
-1. **Sistem Filter Terintegrasi (Global Control)**
-
-    Fitur kontrol ini memungkinkan pengguna untuk melakukan penyaringan data berdasarkan berbagai parameter kunci seperti **Course** (program studi), **Marital Status** (status pernikahan), **Attendance** (kehadiran), **Gender** (jenis kelamin), dan **Status** akademik mahasiswa. Fungsi ini memberikan fleksibilitas kepada **staf akademik** dan **manajemen** untuk melakukan analisis mendalam terhadap segmen mahasiswa tertentu, membandingkan performa antar kelompok, serta mengidentifikasi pola-pola spesifik yang terjadi dalam setiap kategori mahasiswa secara real-time di seluruh komponen dashboard.
-
-2. **Dashboard Metrik Utama (Key Performance Indicators)**
-
-    Komponen ini berfungsi sebagai pusat informasi yang menampilkan indikator performa kunci institusi, meliputi:
-
-   - **Jumlah Total Mahasiswa**: **3,630** mahasiswa aktif
-   - **Rata-rata Umur Mahasiswa**: **23.46** tahun  
-   - **Tingkat Dropout**: **0.39** (39% mahasiswa mengalami dropout)
-   - **Tingkat Kelulusan**: **0.61** (61% mahasiswa berhasil lulus)
-
-    Metrik-metrik ini memberikan gambaran komprehensif mengenai kondisi akademik institusi secara keseluruhan dan menjadi acuan utama untuk evaluasi performa institusi.
-
-3. **Analisis Faktor Determinan Dropout (Critical Factor Analysis)**
-
-    Dashboard ini menyajikan visualisasi mendalam mengenai faktor-faktor krusial yang mempengaruhi tingkat dropout mahasiswa, antara lain:
-
-    - **Dampak Program Beasiswa**: Menunjukkan korelasi signifikan antara penerimaan beasiswa dengan tingkat keberhasilan akademik
-    - **Analisis Program Studi**: Mengidentifikasi 5 program studi dengan tingkat dropout tertinggi (Biofuel Production Technologies 88.89%, Informatics Engineering 86.79%, dan lain-lain)
-    - **Pengaruh Faktor Demografis**: Menganalisis hubungan antara kategori umur dan status akademik mahasiswa
-    - **Korelasi Nilai Akademik**: Mengevaluasi hubungan antara rata-rata nilai penerimaan dengan tingkat dropout
-
-    Analisis ini membantu manajemen memahami akar permasalahan dropout dan mengidentifikasi mahasiswa dalam kategori berisiko tinggi.
-
-4. **Visualisasi Distribusi Komprehensif (Distribution Analysis)**
-
-    Fitur ini menampilkan komposisi dan sebaran proporsional mahasiswa berdasarkan berbagai dimensi kritis:
-
-    - **Distribusi Status Akademik**: Perbandingan antara mahasiswa yang berhasil lulus (2,209) dengan yang dropout (1,421)
-    - **Segmentasi Berdasarkan Beasiswa**: Distribusi mahasiswa graduate vs dropout pada kelompok penerima beasiswa dan non-beasiswa  
-    - **Klasifikasi Berdasarkan Nilai**: Perbandingan tingkat dropout antara mahasiswa dengan nilai tinggi vs rendah
-    - **Kategorisasi Umur**: Analisis distribusi mahasiswa berdasarkan kelompok umur dan status akademiknya
-
-    Visualisasi distribusi ini memungkinkan manajemen untuk melihat kontribusi relatif setiap segmen terhadap angka dropout keseluruhan, mengidentifikasi tren demografis mahasiswa yang memerlukan perhatian khusus, serta merancang strategi intervensi yang tepat sasaran untuk setiap kelompok mahasiswa yang berbeda.
-
-### Menjalankan Prototype Sistem Prediksi
-
-Sistem prediksi status mahasiswa dirancang menggunakan algoritma **Random Forest** dengan tingkat akurasi sebesar **90,72%** berdasarkan hasil evaluasi. Prototype sistem prediksi memiliki fungsi utama untuk melakukan prediksi status mahasiswa berdasarkan data demografis mahasiswa seperti informasi personal, informasi akademik serta informasi finansial dengan kemungkinan **dropout** atau **graduate**. Berikut ini merupakan link untuk mengakses sistem prediksi melalui **streamlit** atau **secara lokal**.
-
-**Link Prototype:**
-[Student Predictions System Streamlit App](https://dashboard-prediction-students-performance-dataset.streamlit.app/)
-
-**Menjalankan Prototype Secara Lokal:**
-```bash
+# Run the prediction model
 streamlit run app.py
 ```
 ---
+
+### Business Dashboard
+
+The student dropout analysis dashboard developed using **Looker Studio** is an integrated data visualization system specifically designed to monitor and analyze student academic conditions at Jaya Jaya Institute. This dashboard focuses on identifying the factors that influence student dropout rates and provides deep insights to support strategic decision-making in academic management.
+
+The main goal of this dashboard is to offer comprehensive visibility into student profiles, dropout patterns, and contributing factors to academic success or failure.
+
+1. **Institutional Overview (Key Metrics)**
+   The dashboard displays 4 key metrics that give an overall picture of the institution's condition:
+
+   * **Total Students**: 3,630 active students
+   * **Average Age**: 23.46 years
+   * **Average Dropout Rate**: 0.39 (39% dropout rate)
+   * **Average Graduation Rate**: 0.61 (61% graduation rate)
+
+2. **Student Status Analysis**
+   **Dropout vs Graduate Distribution** shows the comparison between students who graduated (2,209 students) and those who dropped out (1,421 students), providing a baseline for evaluating institutional success.
+
+3. **Financial Factor Analysis**
+   **Dropout Distribution by Scholarship Status** analyzes the correlation between scholarship status and dropout rate:
+
+   * Without scholarship: 1,374 graduated vs 1,287 dropped out
+   * With scholarship: 835 graduated vs 134 dropped out
+
+4. **Academic Analysis**
+   **Top 5 Programs with Highest Dropout Rates** identifies study programs needing special attention:
+
+   * Biofuel Production Technologies: 88.89%
+   * Informatics Engineering: 86.79%
+   * Equinaculture: 65%
+   * Management (Evening Attendance): 63.55%
+   * Basic Education: 59.86%
+
+5. **Demographic Analysis**
+
+   * **Dropout Distribution by Average Grades**: Compares students with high grades (748 dropouts) vs low grades (673 dropouts)
+   * **Dropout Rate by Age Category**: Shows that students in the "Yes" age category have 3,144 active status compared to 466 in the "No" category
+
+Dashboard Link: [Student Status Analysis Dashboard](https://lookerstudio.google.com/reporting/dbae61fc-6a2e-48fb-a4bd-b5f44fb0a5c3)
+![image](nurrizkyarumjatmiko-dashboard.jpg)
+
+---
+
+### Main Functions of the Dashboard:
+
+1. **Integrated Filtering System (Global Control)**
+   This control feature allows users to filter data based on key parameters such as **Course**, **Marital Status**, **Attendance**, **Gender**, and **Academic Status**. It provides flexibility for **academic staff** and **management** to perform in-depth analysis of specific student segments, compare group performances, and identify specific patterns across all dashboard components in real time.
+
+2. **Key Performance Indicator Dashboard (KPI)**
+   This component serves as the information hub displaying the institution’s key performance indicators, including:
+
+   * **Total Active Students**: **3,630**
+   * **Average Student Age**: **23.46** years
+   * **Dropout Rate**: **0.39** (39% dropped out)
+   * **Graduation Rate**: **0.61** (61% graduated)
+
+   These metrics provide a comprehensive view of the institution’s academic status and serve as the main reference for evaluating performance.
+
+3. **Critical Dropout Factor Analysis**
+   The dashboard presents deep visualizations of the critical factors affecting student dropout rates, such as:
+
+   * **Scholarship Impact**: Shows significant correlation between scholarship reception and academic success
+   * **Program Analysis**: Identifies 5 programs with the highest dropout rates
+   * **Demographic Factors**: Analyzes the relationship between age category and academic status
+   * **Academic Grade Correlation**: Evaluates the connection between average grades and dropout rate
+
+   This analysis helps management understand the root causes of dropout and identify students at high risk.
+
+4. **Comprehensive Distribution Visualization**
+   This feature shows the proportional composition and distribution of students based on various critical dimensions:
+
+   * **Academic Status Distribution**: Comparison between graduates (2,209) and dropouts (1,421)
+   * **Scholarship-Based Segmentation**: Distribution of graduates vs dropouts among scholarship recipients and non-recipients
+   * **Grade-Based Classification**: Comparison of dropout rates between students with high vs low grades
+   * **Age Categorization**: Analysis of student distribution based on age groups and academic status
+
+   These visualizations allow management to see the relative contribution of each segment to the overall dropout rate, identify demographic trends needing special attention, and design targeted intervention strategies for different student groups.
+
+### Running the Prediction System Prototype
+
+The student status prediction system is built using a **Random Forest** algorithm with an accuracy of **90.72%** based on evaluation results. The prototype's main function is to predict a student’s status (dropout or graduate) based on demographic data including personal, academic, and financial information. Below is the link to access the prediction system via **Streamlit** or **run it locally**.
+
+**Prototype Link:**
+[Student Predictions System Streamlit App](https://dashboard-prediction-students-performance-dataset.streamlit.app/)
+
+**Run the Prototype Locally:**
+
+```bash
+streamlit run app.py
+```
+
+---
+
 ### Conclusion
-**Pencapaian Utama**:
 
-1. **Model Prediksi Akurat**, 
-Proyek ini menggunakan model machine learning **Random Forest**, dengan hasil akurasi tertinggi yang diperoleh oleh model **Random Forest** dengan akurasi sebesar **90,72%** dalam memprediksi status mahasiswa, memungkinkan deteksi dini mahasiswa berisiko dropout dengan tingkat kepercayaan tinggi.
+**Key Achievements**:
 
-2. **Faktor-Faktor yang Mempengaruhi Prevalensi Dropout**
-Berikut faktor-faktor utama yang mempengaruhi **dropout** berdasarkan hasil **Feature Importance** model Random Forest: **status pembayaran UKT**, **status penerima beasiswa**, **nilai kualifikasi**, **kelompok umur**, **program studi**, **nilai semester (1,2)**, **mata kuliah tidak lulus** dan **mata kuliah yang lulus**. Temuan ini memberikan wawasan strategis untuk intervensi yang tepat sasaran
+1. **Accurate Prediction Model**
+   The project utilized the **Random Forest** machine learning model, achieving the highest accuracy of **90.72%** in predicting student status, allowing early detection of students at risk of dropping out with high confidence.
 
-3. **Sistem Prediksi dan Dashboard Monitoring**
-Model machine learning yang dikembangkan pada sistem prediksi menunjukkan performa yang baik dalam memprediksi status mahasiswa serta dashboard interaktif yang menyajikan visualisasi real-time untuk mempermudah dalam melakukan monitoring.
+2. **Key Factors Influencing Dropout**
+   Based on the **Feature Importance** from the Random Forest model, the main factors affecting dropout are: **UKT payment status**, **scholarship status**, **qualification scores**, **age group**, **study program**, **semester grades (1.2)**, **failed subjects**, and **passed subjects**. These findings provide strategic insight for targeted interventions.
 
-### Rekomendasi Action Items
-1. **Ekspansi Program Beasiswa dan Dukungan Finansial**
-   
-    Tingkatkan alokasi beasiswa dan implementasikan sistem pembayaran UKT yang fleksibel, mengingat mahasiswa berbeasiswa memiliki tingkat dropout hanya 13.8% dibanding 48.4% untuk non-beasiswa. Buat program bantuan finansial darurat untuk mahasiswa dengan kesulitan ekonomi mendadak.
+3. **Prediction System and Monitoring Dashboard**
+   The machine learning model shows good performance in predicting student status. The interactive dashboard provides real-time visualizations to support effective monitoring.
 
-2. **Intervensi Khusus Program Studi Berisiko Tinggi**
+---
 
-    Fokus perbaikan pada program studi dengan dropout rate tertinggi: Biofuel Production Technologies (88.89%) dan Informatics Engineering (86.79%) melalui revisi kurikulum, program mentoring intensif, dan penambahan fasilitas lab atau praktikum yang memadai.
+### Recommended Action Items
 
-3. **Program Dukungan Akademik Terintegrasi**
-    
-    Implementasikan program remedial untuk mahasiswa dengan nilai rendah, study skills workshop untuk semester awal, dan academic coaching one-on-one. Sediakan peer learning groups dan layanan konseling akademik yang mudah diakses.
+1. **Expand Scholarship and Financial Support Programs**
+   Increase scholarship allocation and implement flexible UKT (tuition fee) payment systems. Scholarship recipients have a dropout rate of only 13.8% compared to 48.4% for non-recipients. Introduce emergency financial aid programs for students facing sudden financial hardship.
+
+2. **Targeted Interventions for High-Risk Study Programs**
+   Prioritize improvements in study programs with the highest dropout rates: Biofuel Production Technologies (88.89%) and Informatics Engineering (86.79%). Strategies include curriculum revisions, intensive mentoring programs, and better lab or practical facilities.
+
+3. **Integrated Academic Support Programs**
+   Implement remedial programs for low-performing students, study skills workshops for early semesters, and one-on-one academic coaching. Provide peer learning groups and easily accessible academic counseling services.
